@@ -1,8 +1,8 @@
 # react-asynchronous-component 
 
-react-asynchronous-component resolves component asynchronously  with support for code-spliting.
+`react-asynchronous-component` resolves component asynchronously  with the support for code-spliting.
 
-react-asynchronous-component gives you power to split your bundles into small chunks with webpack and lazy load them, 
+`react-asynchronous-component` gives you power to split your bundles into small chunks with webpack and lazy load them, 
 this reduces the cost of initial JS to be downloaded. for big projects its ideal to use code-spliting because the
 bundle size increases and a lot of useless javascript is download which really is not required for the first render.
 

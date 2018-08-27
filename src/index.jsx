@@ -21,10 +21,6 @@ export default class Async extends React.Component {
     error: false,
   };
 
-  componentWillMount() {
-    console.log(typeof this.props.loader, typeof this.props.error);//eslint-disable-line
-  }
-
   componentDidMount = () => {
     const { load } = this.props;
     load.then((c) => {
