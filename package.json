@@ -1,6 +1,6 @@
 {
   "name": "react-asynchronous-component",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "a simple react async component which implements dynamic import syntax to add code spliting to the project\"",
   "main": "dist/react-async.component.min.js",
   "scripts": {
