@@ -2,7 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Async from '../dist/react-async.component.min';
 
-const AsyncHome = () => (<Async load={import(/* webpackChunkName: "homefatchunk" */ './home')} loader="please wait ...." />);
+const AsyncHome = () => (
+  <Async
+    load={import(/* webpackChunkName: "homefatchunk" */ './home')}
+    loader={() => <h1>loading....</h1>}
+    error={() => <h1>error....</h1>}
+  />);
 
 class App extends React.Component {
   constructor(props) {

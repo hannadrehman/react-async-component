@@ -45,11 +45,13 @@ import Async from 'react-asynchronous-component';
 const AsyncHome = (props) => (
     <Async 
         load={import(/* webpackChunkName: "home" */ './home')} 
-        loader={<p>loading</p>}
-        error={<p>sime error occured</p>} 
+        loader={()=><p>loading</p>}
+        error={()=><p>sime error occured</p>} 
         componentProps={props}
     />
 );
+
+// loader and error expect a react component or simple string. 
 
 class App extends React.Component {
   render() {
@@ -89,8 +91,8 @@ const AsyncProfile = props => (
     <Async 
         componentProps={props} 
         load={import('./Profile.component' /* webpackChunkName: "profile" */)} 
-        loading={<p>loading....</p>}"
-        error={<p>Error....</p>}
+        loading={()=><p>loading....</p>}"
+        error={()=><p>Error....</p>}
     />
 );
 const AsyncErrorPage = props => (
