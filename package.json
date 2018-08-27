@@ -1,13 +1,13 @@
 {
   "name": "react-asynchronous-component",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "a simple react async component which implements dynamic import syntax to add code spliting to the project\"",
   "main": "dist/react-async.component.min.js",
   "scripts": {
     "start": "npm run devserver -- --mode development  --env.NODE_ENV=development",
     "build": "webpack --optimize-minimize --mode production --env.NODE_ENV=production",
     "devserver": "webpack-dev-server --open  --inline",
-    "test:watch": "npm run test -- -watchAll",
+    "test:watch": "npm run test -- --watchAll",
     "test": "export NODE_ENV=test&& jest"
   },
   "repository": {
@@ -61,5 +61,38 @@
     "prop-types": "^15.6.2",
     "react": "^16.4.2",
     "react-dom": "^16.4.2"
+  },
+  "jest": {
+    "verbose": true,
+    "transform": {
+      "^.+\\.jsx?$": "<rootDir>/node_modules/babel-jest",
+      "^.+\\.js?$": "<rootDir>/node_modules/babel-jest"
+    },
+    "moduleFileExtensions": [
+      "js",
+      "jsx"
+    ],
+    "unmockedModulePathPatterns": [
+      "<rootDir>/node_modules/react/",
+      "<rootDir>/node_modules/react-dom/"
+    ],
+    "moduleDirectories": [
+      "node_modules"
+    ],
+    "transformIgnorePatterns": [
+      "/node_modules/"
+    ],
+    "coveragePathIgnorePatterns": [
+      "/node_modules/"
+    ],
+    "modulePathIgnorePatterns": [
+      "/node_modules/"
+    ],
+    "collectCoverage": true,
+    "coverageReporters": [
+      "json",
+      "lcov",
+      "text"
+    ]
   }
 }
