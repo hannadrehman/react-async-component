@@ -10,8 +10,8 @@ export default class Async extends React.Component {
   };
 
   static defaultProps = {
-    loader: null,
-    error: null,
+    loader: () => <p />,
+    error: () => <p />,
     componentProps: {},
   };
 

@@ -5,7 +5,7 @@ import Async from '../dist/react-async.component.min';
 const AsyncHome = () => (
   <Async
     load={import(/* webpackChunkName: "homefatchunk" */ './home')}
-    loader={() => <h1>loading....</h1>}
+    loader="loading..."
     error={() => <h1>error....</h1>}
   />);
 
