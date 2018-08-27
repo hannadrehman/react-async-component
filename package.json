@@ -1,0 +1,65 @@
+{
+  "name": "react-asynchronous-component",
+  "version": "1.0.0",
+  "description": "a simple react async component which implements dynamic import syntax to add code spliting to the project\"",
+  "main": "dist/react-async.component.min.js",
+  "scripts": {
+    "start": "npm run devserver -- --mode development  --env.NODE_ENV=development",
+    "build": "webpack --optimize-minimize --mode production --env.NODE_ENV=production",
+    "devserver": "webpack-dev-server --open  --inline",
+    "test:watch": "npm run test -- -watchAll",
+    "test": "export NODE_ENV=test&& jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hannadrehman/react-asynchronous-component.git"
+  },
+  "keywords": [
+    "javascript",
+    "react",
+    "jsx",
+    "code-spliting",
+    "webpack",
+    "dynamic-imports"
+  ],
+  "author": "hannad <hannad63@yahoo.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hannadrehman/react-asynchronous-component/issues"
+  },
+  "homepage": "https://github.com/hannadrehman/react-asynchronous-component#readme",
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-eslint": "^8.2.6",
+    "babel-jest": "^23.4.2",
+    "babel-loader": "^7.1.5",
+    "babel-plugin-object-rest-spread": "0.0.0",
+    "babel-plugin-syntax-dynamic-import": "^6.18.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "enzyme": "^3.5.0",
+    "enzyme-adapter-react-16": "^1.3.0",
+    "eslint": "^5.4.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-loader": "^2.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.1",
+    "eslint-plugin-react": "^7.11.1",
+    "html-webpack-plugin": "^3.2.0",
+    "jest": "^23.5.0",
+    "jest-cli": "^23.5.0",
+    "system-bell-webpack-plugin": "^1.0.0",
+    "uglifyjs-webpack-plugin": "^1.3.0",
+    "webpack": "^4.17.1",
+    "webpack-cli": "^3.1.0",
+    "webpack-dev-server": "^3.1.6"
+  },
+  "peerDependencies": {
+    "prop-types": "^15.6.2",
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2"
+  }
+}

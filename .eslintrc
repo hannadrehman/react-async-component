@@ -1,0 +1,15 @@
+{
+  "env": {
+    "browser": true,
+    "node": false,
+    "jest": true
+  },
+  "extends": ["airbnb"],
+  "globals": {},
+  "parser": "babel-eslint",
+  "rules": {},
+  "settings": {
+    "ecmascript": 6,
+    "jsx": true
+  }
+}
